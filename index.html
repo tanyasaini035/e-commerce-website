@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEase | E-Commerce Website</title>
+
+<style>
+/* ---------- GENERAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+    background: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* ---------- PRODUCTS ---------- */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card button:hover {
+    background: #1a252f;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ---------- LOGIN MODAL ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    width: 320px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 8px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ---------- NAVBAR ---------- -->
+<nav>
+    <h2>ShopEase</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="signup.html">Signup</a>
+
+        <a href="login.html">Login</a>
+
+
+        <a href="#">Cart</a>
+    <a href="about.html">About</a>
+
+    </div>
+</nav>
+
+<!-- ---------- HERO ---------- -->
+<div class="hero">
+    <h1>Welcome to ShopEase</h1>
+    <p>Your One-Stop Online Shopping Store</p>
+</div>
+
+<!-- ---------- PRODUCTS ---------- -->
+<div class="products">
+    <div class="card">
+        <img src="earphones.jpg" alt="earphones">
+        <h3>Product 1</h3>
+        <p>₹500</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="jackets.jpg" alt="Jacket">
+        <h3>Product 2</h3>
+        <p>₹800</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="t shirts.jpg" alt="t-shirts">
+        <h3>Product 3</h3>
+        <p>₹1200</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<!-- ---------- LOGIN POPUP ---------- -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLogin()">×</span>
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email" required>
+<input type="password" id="password" placeholder="Password" required>
+
+        <button onclick="loginUser()">Login</button>
+
+    </div>
+</div>
+
+<!-- ---------- FOOTER ---------- -->
+
+
+<!-- -----<!-- FOOTER -->
+<footer style="background:#2c3e50; color:white; padding:30px 20px; text-align:center;">
+    <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-around;">
+
+        <!-- About / Short Info -->
+        <div style="margin:10px;">
+            <h3>ShopEase</h3>
+            <p>Your one-stop online shopping store. Browse, signup, login, and enjoy shopping!</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div style="margin:10px;">
+            <h3>Quick Links</h3>
+            <p><a href="index.html" style="color:white; text-decoration:none;">Home</a></p>
+            <p><a href="products.html" style="color:white; text-decoration:none;">Products</a></p>
+            <p><a href="about.html" style="color:white; text-decoration:none;">About</a></p>
+            <p><a href="login.html" style="color:white; text-decoration:none;">Login</a></p>
+        </div>
+
+        <!-- Contact Info -->
+        <div style="margin:10px;">
+            <h3>Contact Us</h3>
+            <p>Email: support@shopease.com</p>
+            <p>Phone: +91 12345 67890</p>
+        </div>
+
+        <!-- Social Media -->
+        <div style="margin:10px;">
+            <h3>Follow Us</h3>
+            <p>
+                <a href="#" style="color:white; text-decoration:none; margin:5px;">Facebook</a> |
+                <a href="#" style="color:white; text-decoration:none; margin:5px;">Instagram</a> |
+                <a href="#" style="color:white; text-decoration:none; margin:5px;">Twitter</a>
+            </p>
+        </div>
+
+    </div>
+
+    <p style="margin-top:20px;">&copy; 2026 ShopEase. All rights reserved.</p>
+</footer>
+----- JAVASCRIPT ---------- -->
+<script>
+function openLogin() {
+    document.getElementById("loginModal").style.display = "block";
+}
+
+function closeLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+function loginUser() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (email === "" || password === "") {
+        alert("Please enter email and password");
+    } else {
+        alert("Login Successful!");
+        closeLogin();
+    }
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+

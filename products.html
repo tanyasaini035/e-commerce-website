@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | ShopEase</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* NAVBAR */
+nav {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>ShopEase</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+    <div class="card">
+        <img src="mobile.jpg.jpg " alt="Phone">
+        <h3>Smart Phone</h3>
+        <p>₹15,000</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="laptop.jpg.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>₹45,000</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="headphones.png" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>₹2,000</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="smartwatch.jpg" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>₹3,500</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 ShopEase | Products Page
+</footer>
+
+<script>
+function addToCart() {
+    alert("Product added to cart!");
+}
+</script>
+
+</body>
+</html>
+

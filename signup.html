@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup | ShopEase</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.signup-box {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input, button {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-box">
+    <h2>Signup</h2>
+    <input type="text" id="signupUsername" placeholder="Username" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPass" placeholder="Password" required>
+    <input type="password" id="signupConfirmPass" placeholder="Confirm Password" required>
+
+    <button onclick="signup()">Signup</button>
+
+    <a href="login.html">Already have an account? Login</a>
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<script>
+function signup() {
+    // Get values
+    let username = document.getElementById("signupUsername").value;
+    let password = document.getElementById("signupPass").value;
+    let confirmPass = document.getElementById("signupConfirmPass").value;
+
+    // Simple validation
+    if(username === "" || password === "" || confirmPass === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    if(password !== confirmPass) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    // Signup successful
+    alert("Signup Successful! Welcome, " + username);
+    
+    // Redirect to products page
+    window.location.href = "products.html";
+}
+</script>
+
+</body>
+</html>
